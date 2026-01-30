@@ -53,23 +53,29 @@ npm run dev
 ### Login
 
 <img src="./public/login.png" width="600"/>
+<img src="./public/login_phone.png" width="600"/>
 
 ### Inbox
 
 <img src="./public/inbox.png" width="600"/>
+<img src="./public/inbox_phone.png" width="600"/>
 
 ### Dashboard
 
 <img src="./public/dashboard.png" width="600"/>
+<img src="./public/dashboard_phone.png" width="600"/>
 
 ### Notifications
 
 <img src="./public/notifications.png" width="600"/>
+<img src="./public/notifications_phone.png" width="600"/>
 
 ### Task
 
 <img src="./public/task.png" width="600"/>
+<img src="./public/task_phone.png" width="600"/>
 
 ### Profile
 
 <img src="./public/profile.png" width="600"/>
+<img src="./public/profile_phone.png" width="600"/>
