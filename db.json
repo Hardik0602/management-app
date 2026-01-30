@@ -1,0 +1,74 @@
+{
+  "tasks": [
+    {
+      "id": "task-001",
+      "title": "Expense Approval - Mumbai Trip",
+      "description": "Travel expense claim for client meeting in Mumbai",
+      "category": "Expense Approval",
+      "status": "pending",
+      "priority": "high",
+      "assignedTo": "john.doe@company.com",
+      "submittedBy": "Rahul Sharma",
+      "submittedDate": "2025-01-25",
+      "dueDate": "2026-01-28",
+      "details": {
+        "amount": 15000,
+        "currency": "INR",
+        "purpose": "Client Meeting",
+        "dates": "Jan 20-22, 2025"
+      }
+    },
+    {
+      "id": "task-002",
+      "title": "Leave Request - Casual Leave",
+      "description": "Requesting 2 days casual leave for personal work",
+      "category": "Leave Request",
+      "status": "pending",
+      "priority": "medium",
+      "assignedTo": "jane.smith@company.com",
+      "submittedBy": "Priya Patel",
+      "submittedDate": "2025-01-26",
+      "dueDate": "2025-01-30",
+      "details": {
+        "leaveType": "Casual",
+        "startDate": "2025-02-01",
+        "endDate": "2025-02-02",
+        "reason": "Personal work"
+      }
+    },
+    {
+      "id": "task-003",
+      "title": "Document Review - Q4 Report",
+      "description": "Please review the quarterly sales report before publishing",
+      "category": "Document Review",
+      "status": "in_progress",
+      "priority": "high",
+      "assignedTo": "john.doe@company.com",
+      "submittedBy": "Finance Team",
+      "submittedDate": "2025-01-24",
+      "dueDate": "2025-01-27",
+      "details": {
+        "documentName": "Q4_Sales_Report.pdf",
+        "pages": 12
+      }
+    },
+    {
+      "id": "task-004",
+      "title": "Leave Request - Casual Leave",
+      "description": "Requesting 2 days casual leave for personal work",
+      "category": "Leave Request",
+      "status": "pending",
+      "priority": "medium",
+      "assignedTo": "john.doe@company.com",
+      "submittedBy": "Priya Patel",
+      "submittedDate": "2025-01-26",
+      "dueDate": "2025-01-30",
+      "details": {
+        "leaveType": "Casual",
+        "startDate": "2025-02-01",
+        "endDate": "2025-02-02",
+        "reason": "Personal work"
+      }
+    }
+  ]
+}
