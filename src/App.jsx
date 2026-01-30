@@ -4,7 +4,6 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom"
-
 import MainLayout from "./layouts/MainLayout"
 import Login from "./pages/Login"
 import Dashboard from "./pages/Dashboard"
@@ -13,6 +12,7 @@ import TaskDetail from "./pages/TaskDetail"
 import Notifications from "./pages/Notifications"
 import Profile from "./pages/Profile"
 import ProtectedRoute from "./components/ProtectedRoute"
+import { TaskProvider } from "./context/TaskContext"
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -24,8 +24,8 @@ const router = createBrowserRouter(
             <MainLayout />
           </ProtectedRoute>
         }>
-        <Route index element={<Dashboard />} />
-        <Route path="inbox" element={<Inbox />} />
+        <Route index element={<Inbox />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="task/:id" element={<TaskDetail />} />
         <Route path="notifications" element={<Notifications />} />
         <Route path="profile" element={<Profile />} />
@@ -34,5 +34,5 @@ const router = createBrowserRouter(
   )
 )
 export default function App() {
-  return <RouterProvider router={router} />
+  return <TaskProvider><RouterProvider router={router} /></TaskProvider>
 }

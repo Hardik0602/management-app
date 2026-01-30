@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useAuth } from "../context/AuthContext"
 import { useNavigate } from "react-router-dom"
+import { toast } from "react-toastify"
 export default function Login() {
   const { login } = useAuth()
   const navigate = useNavigate()
@@ -9,7 +10,7 @@ export default function Login() {
   const handle = (e) => {
     e.preventDefault()
     if (login(email, password)) navigate("/")
-    else alert("Invalid credentials")
+    else toast.error('Invalid credentials')
   }
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">

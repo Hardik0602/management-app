@@ -5,7 +5,7 @@
       "title": "Expense Approval - Mumbai Trip",
       "description": "Travel expense claim for client meeting in Mumbai",
       "category": "Expense Approval",
-      "status": "pending",
+      "status": "approved",
       "priority": "high",
       "assignedTo": "john.doe@company.com",
       "submittedBy": "Rahul Sharma",
