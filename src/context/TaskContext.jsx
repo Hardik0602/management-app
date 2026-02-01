@@ -1,6 +1,6 @@
-import { createContext, useContext, useEffect, useState } from "react"
-import { useAuth } from "./AuthContext"
-import { toast } from "react-toastify"
+import { createContext, useContext, useEffect, useState } from 'react'
+import { useAuth } from './AuthContext'
+import { toast } from 'react-toastify'
 const TaskContext = createContext()
 export function TaskProvider({ children }) {
   const { user } = useAuth()

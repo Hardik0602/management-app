@@ -1,12 +1,14 @@
-import { useNavigate } from "react-router-dom"
-import { useTasks } from "../context/TaskContext"
-export default function Notifications() {
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useTasks } from '../context/TaskContext'
+import Notification from '../components/Notification'
+const Notifications = () => {
   const { tasks } = useTasks()
   const navigate = useNavigate()
-  const notifications = buildNotifications(tasks)
+  const notifications = Notification(tasks)
   return (
-    <div className="max-w-2xl mx-auto p-4 space-y-3">
-      <h1 className="text-2xl font-bold mb-5 text-center">
+    <div className='max-w-2xl mx-auto p-4 space-y-3'>
+      <h1 className='text-2xl font-bold mb-5 text-center'>
         Notifications
       </h1>
       {notifications.map(n => (
@@ -15,58 +17,20 @@ export default function Notifications() {
           onClick={() => navigate(`/task/${n.taskId}`)}
           className={`p-4 rounded shadow border text-center w-full md:w-lg mx-auto
             cursor-pointer hover:-translate-y-1 transition
-            ${n.type === "overdue" && "bg-red-50 border-red-200"}
-            ${n.type === "dueSoon" && "bg-orange-50 border-orange-200"}
-            ${n.type === "pending" && "bg-white"}
+            ${n.type === 'overdue' && 'bg-red-50 border-red-200'}
+            ${n.type === 'dueSoon' && 'bg-orange-50 border-orange-200'}
+            ${n.type === 'pending' && 'bg-white'}
           `}>
-          <p className="font-medium">{n.message}</p>
-          <p className="text-xs text-gray-400">Due: {n.dueDate}</p>
+          <p className='font-medium'>{n.message}</p>
+          <p className='text-xs text-gray-400'>Due: {n.dueDate}</p>
         </div>
       ))}
       {notifications.length === 0 && (
-        <p className="text-gray-400 text-center mt-10">
+        <p className='text-center text-gray-400 mt-50 text-3xl font-bold'>
           No notifications
         </p>
       )}
     </div>
   )
 }
-function buildNotifications(tasks) {
-  const today = new Date()
-  const twoDays = 2 * 24 * 60 * 60 * 1000
-  const list = []
-  tasks.forEach(t => {
-    if (t.status !== "pending") return
-    const due = new Date(t.dueDate)
-    const diff = due - today
-    if (diff < 0) {
-      list.push({
-        id: `${t.id}-overdue`,
-        type: "overdue",
-        taskId: t.id,
-        dueDate: t.dueDate,
-        message: `${t.title} is OVERDUE`
-      })
-    }
-    else if (diff <= twoDays) {
-      list.push({
-        id: `${t.id}-soon`,
-        type: "dueSoon",
-        taskId: t.id,
-        dueDate: t.dueDate,
-        message: `${t.title} is due soon`
-      })
-    }
-    else {
-      list.push({
-        id: `${t.id}-pending`,
-        type: "pending",
-        taskId: t.id,
-        dueDate: t.dueDate,
-        message: `${t.title} is pending review`
-      })
-    }
-  })
-  const order = { overdue: 0, dueSoon: 1, pending: 2 }
-  return list.sort((a, b) => order[a.type] - order[b.type])
-}
+export default Notifications
