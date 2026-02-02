@@ -75,6 +75,11 @@ npm run dev
 <img src="./public/task.png" width="600"/>
 <img src="./public/task_phone.png" width="600"/>
 
+### Confirm Action
+
+<img src="./public/confirm.png" width="600"/>
+<img src="./public/confirm_phone.png" width="600"/>
+
 ### Profile
 
 <img src="./public/profile.png" width="600"/>

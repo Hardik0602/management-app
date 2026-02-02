@@ -55,6 +55,13 @@ const TaskDetail = () => {
   return (
     <div className='p-3 flex justify-center'>
       <div className='flex flex-col md:flex-row gap-5'>
+        <div className='md:hidden'>
+          <button
+            onClick={() => navigate(-1)}
+            className='bg-blue-500 text-white px-4 py-2 rounded'>
+            Go Back
+          </button>
+        </div>
         <div>
           <div className={`${bg} p-6 w-full max-w-lg rounded shadow text-center`}>
             <h2 className='text-2xl font-bold mb-2'>{task.title}</h2>

@@ -5,10 +5,9 @@ import { useTasks } from '../context/TaskContext'
 import { useState } from 'react'
 const NavBar = () => {
   const { user, logout } = useAuth()
-  const { tasks } = useTasks()
+  const { unreadCount } = useTasks()
   const navigate = useNavigate()
   const [mobileView, setMobileView] = useState(false)
-  const unreadCount = tasks.filter(t => t.status === 'pending').length
   const handleLogout = () => {
     logout()
     navigate('/login')
