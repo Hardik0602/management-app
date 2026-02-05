@@ -1,11 +1,11 @@
 ## Tech Stack
 
-* **React (JavaScript)** – Component-based UI development
-* **Vite** – Lightning-fast development server & bundler
-* **React Router DOM** – Client-side routing
-* **Tailwind CSS** – Utility-first styling
-* **JSON Server** – Local mock backend & REST API
-* **React Toastify** – Toast notifications
+* **React (JavaScript)**
+* **Vite**
+* **React Router DOM**
+* **Tailwind CSS**
+* **JSON Server**
+* **React Toastify**
 
 ## Installation
 
