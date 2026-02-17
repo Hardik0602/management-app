@@ -17,7 +17,7 @@ const NavBar = () => {
       ? 'flex items-center px-4 py-2 text-sm font-medium text-blue-600 bg-blue-50 rounded-md transition-all duration-200'
       : 'flex items-center px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-md transition-all duration-200'
   return (
-    <nav className='bg-white border-b border-slate-200 sticky top-0'>
+    <nav className='bg-white border-b border-slate-200 sticky top-0 z-10'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-16'>
           <h1 className='text-xl font-bold text-indigo-600'>TaskFlow</h1>
